@@ -102,46 +102,6 @@ export function layout(title, content) {
   }
   
   export function list(posts, user) {
-    console.log('list: user=', user)
-    let list = []
-    for (let post of posts) {
-      list.push(`
-      <li>
-        <h2>${ post.title } -- by ${post.username}</h2>
-        <p><a href="/post/${post.id}">Read post</a></p>
-      </li>
-      `)
-    }
-    let content = `
-    <h1>Posts</h1>
-    <p>${(user==null)?'<a href="/login">Login</a> to Create a Post!':'Welcome '+user.username+', You may <a href="/post/new">Create a Post</a> or <a href="/logout">Logout</a> !'}</p>
-    <p>There are <strong>${posts.length}</strong> posts!</p>
-    <ul id="posts">
-      ${list.join('\n')}
-    </ul>
-    `
-    return layout('Posts', content)
-  }
-  
-  export function newPost() {
-    return layout('New Post', `
-    <h1>New Post</h1>
-    <p>Create a new post.</p>
-    <form action="/post" method="post">
-      <p><input type="text" placeholder="Title" name="title"></p>
-      <p><textarea placeholder="Contents" name="body"></textarea></p>
-      <p><input type="submit" value="Create"></p>
-    </form>
-    `)
-  }
-  
-  export function show(post) {
-    return layout(post.title, `
-      <h1>${post.title} -- by ${post.username}</h1>
-      <p>${post.body}</p>
-    `)
-  }
-  export function list(posts, user) {
     console.log('list: user=', user);
     let list = [];
     for (let post of posts) {
@@ -162,4 +122,24 @@ export function layout(title, content) {
     `;
     return layout('Posts', content);
   }
+  
+  export function newPost() {
+    return layout('New Post', `
+    <h1>New Post</h1>
+    <p>Create a new post.</p>
+    <form action="/post" method="post">
+      <p><input type="text" placeholder="Title" name="title"></p>
+      <p><textarea placeholder="Contents" name="body"></textarea></p>
+      <p><input type="submit" value="Create"></p>
+    </form>
+    `)
+  }
+  
+  export function show(post) {
+    return layout(post.title, `
+      <h1>${post.title} -- by ${post.username}</h1>
+      <p>${post.body}</p>
+    `)
+  }
+
   
