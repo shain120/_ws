@@ -7,6 +7,7 @@
 ---
 ### 作業二 
 參考上課範例、chatgpt協助debug
+
 [HW2](https://github.com/shain120/_ws/tree/master/web/HW2)
 
 ---
