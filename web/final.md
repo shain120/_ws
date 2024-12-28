@@ -24,5 +24,5 @@
 
   ---
 ### 期中Project 
-使用上學期製作遊戲,增加帳號的創建登入功能,配色讓chat 自己產生
+使用上學期製作遊戲,增加帳號的創建登入功能,配色讓chat gpt自己產生
 [MID](https://github.com/shain120/_ws/tree/master/web/midterm)
